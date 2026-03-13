@@ -1,0 +1,58 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Hello, Welcome\"\n",
+        "format: html\n",
+        "---\n",
+        "\n",
+        "## About me\n",
+        "\n",
+        "\n",
+        "\n",
+        "Markdown is an easy to read and write text format:\n",
+        "\n",
+        "- It's _plain text_ so works well with version control\n",
+        "- It can be **rendered** into HTML, PDF, and more\n",
+        "- Learn more at: <https://quarto.org/docs/authoring/>\n",
+        "\n",
+        "## Code Cell\n",
+        "\n",
+        "Here is a Python code cell:"
+      ],
+      "id": "8e02ab4c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import os\n",
+        "os.cpu_count()"
+      ],
+      "id": "229f1e62",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Equation\n"
+      ],
+      "id": "903a6050"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\chauvet48\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
