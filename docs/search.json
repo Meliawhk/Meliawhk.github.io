@@ -18,7 +18,7 @@
     "href": "walkthrough.html#code-cell",
     "title": "Hello, Welcome",
     "section": "Code Cell",
-    "text": "Code Cell\nHere is a Python code cell:\n\nimport os\nos.cpu_count()\n\n12"
+    "text": "Code Cell\nHere is a Python code cell:\n\nimport os\nos.cpu_count()\n\n8"
   },
   {
     "objectID": "walkthrough.html#equation",
