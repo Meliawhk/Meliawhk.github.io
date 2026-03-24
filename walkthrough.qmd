@@ -23,4 +23,69 @@ os.cpu_count()
 ```
 
 ## Equation
+```{ojs}
+//| echo: false
 
+// 1. Initialisation des constantes
+
+w = 600
+h = 400
+
+// 2. Importation (on utilise 'THREE' pour correspondre à ton code)
+THREE = require("three@0.160.0")
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+
+
+// 3. Création de la vue
+canvas = {
+  // On crée un conteneur HTML
+  const container = html`<div style="height:${h}px; width:${w}px;"></div>`;
+  
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, w/h, 0.1, 100);
+  camera.position.set(2, 2, 2);
+  camera.lookAt(0, 0, 0); // On oriente la caméra vers le centre
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(w, h);
+  
+  // On ajoute le canvas au conteneur
+  container.appendChild(renderer.domElement);
+
+  const controls = new OrbitControls.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; // Ajoute une inertie fluide
+  controls.dampingFactor = 0.05;
+
+  const size = 10;
+  const divisions = 10;
+  const gridHelper = new THREE.GridHelper(size, divisions, 0x888888, 0x444444);
+  scene.add(gridHelper);
+
+  // Optionnel : Un repère d'axes (Rouge=X, Vert=Y, Bleu=Z)
+  const axesHelper = new THREE.AxesHelper(1);
+  scene.add(axesHelper);
+
+  // Ajout d'une lumière (indispensable pour le MeshStandardMaterial, sinon c'est noir !)
+  const light = new THREE.DirectionalLight(0xffffff, 1);
+  light.position.set(5, 5, 5);
+  scene.add(light);
+  scene.add(new THREE.AmbientLight(0x404040)); // Lumière d'ambiance
+
+  const geo = new THREE.BoxGeometry();
+  const mat = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
+  const mesh = new THREE.Mesh(geo, mat);
+  scene.add(mesh);
+
+  function animate() {
+    mesh.rotation.x += 0.01;
+    mesh.rotation.y += 0.01;
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // On retourne le conteneur pour qu'il s'affiche dans Quarto
+  return container;
+}
+```

@@ -1,0 +1,94 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Hello, Welcome\"\n",
+        "format: html\n",
+        "---\n",
+        "\n",
+        "## About me\n",
+        "\n",
+        "\n",
+        "\n",
+        "Markdown is an easy to read and write text format:\n",
+        "\n",
+        "- It's _plain text_ so works well with version control\n",
+        "- It can be **rendered** into HTML, PDF, and more\n",
+        "- Learn more at: <https://quarto.org/docs/authoring/>\n",
+        "\n",
+        "## Code Cell\n",
+        "\n",
+        "Here is a Python code cell:"
+      ],
+      "id": "def9c982"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import os\n",
+        "os.cpu_count()"
+      ],
+      "id": "fb87c19c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Equation\n",
+        "\n",
+        "\n",
+        "// 1. Importation de Three.js\n",
+        "three = require(\"three@0.160.0\")\n",
+        "\n",
+        "// 2. Création de la scène, de la caméra et du rendu\n",
+        "width = 600\n",
+        "height = 400\n",
+        "\n",
+        "scene = new three.Scene()\n",
+        "camera = new three.PerspectiveCamera(75, width / height, 0.1, 1000)\n",
+        "renderer = {\n",
+        "  const container = html`<div style=\"height:${height}px;\"></div>`;\n",
+        "  const renderer = new three.WebGLRenderer({ antialias: true });\n",
+        "  renderer.setSize(width, height);\n",
+        "  container.appendChild(renderer.domElement);\n",
+        "  \n",
+        "  // Création d'un cube\n",
+        "  const geometry = new three.BoxGeometry(1, 1, 1);\n",
+        "  const material = new three.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });\n",
+        "  const cube = new three.Mesh(geometry, material);\n",
+        "  scene.add(cube);\n",
+        "\n",
+        "  camera.position.z = 5;\n",
+        "\n",
+        "  // Boucle d'animation\n",
+        "  function animate() {\n",
+        "    requestAnimationFrame(animate);\n",
+        "    cube.rotation.x += 0.01;\n",
+        "    cube.rotation.y += 0.01;\n",
+        "    renderer.render(scene, camera);\n",
+        "  }\n",
+        "  animate();\n",
+        "\n",
+        "  return container;\n",
+        "}\n"
+      ],
+      "id": "a4e64266"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\DELL\\anaconda3\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
