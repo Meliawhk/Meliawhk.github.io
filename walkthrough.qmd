@@ -1,5 +1,5 @@
 ---
-title: "Bienvenue sur mon Portefolio;"
+title: "Bienvenue sur mon Portefolio"
 format: html
 ---
 
@@ -42,10 +42,10 @@ GLTFLoader = {
 // 3. Création de la vue
 canvas = {
   // On crée un conteneur HTML
-  const container = html`<div style="height:${h}px; width:${w}px;"></div>`;
+  const container = html`<div style="width: 90%; height: 60vh; min-height: 300px;"></div>`;
   
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(60, w/h, 0.1, 100);
+  const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
   camera.position.set(5, 5, 5);
   camera.lookAt(0, 0, 0); // On oriente la caméra vers le centre
 
@@ -56,6 +56,24 @@ canvas = {
 
   // On ajoute le canvas au conteneur
   container.appendChild(renderer.domElement);
+
+  const resizeObserver = new ResizeObserver((entries) => {
+    for (const entry of entries) {
+      // On récupère la vraie taille de la boîte sur le téléphone
+      const width = entry.contentRect.width;
+      const height = entry.contentRect.height;
+      
+      // On met à jour la taille du dessin
+      renderer.setSize(width, height);
+      
+      // On ajuste l'objectif de la caméra pour ne pas déformer le nounours
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+  });
+  
+  // On demande à l'observateur de surveiller notre conteneur
+  resizeObserver.observe(container);
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true; 
