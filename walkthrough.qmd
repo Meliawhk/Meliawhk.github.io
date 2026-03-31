@@ -1,39 +1,41 @@
 ---
-title: "Hello, Welcome"
+title: "Bienvenue sur mon Portefolio;"
 format: html
 ---
 
 ## About me
 
+Je m'appelle Pierre Chauvet, suis un étudiant en Master 1 ISCG à Limoges.
 
 
-Markdown is an easy to read and write text format:
-
-- It's _plain text_ so works well with version control
-- It can be **rendered** into HTML, PDF, and more
-- Learn more at: <https://quarto.org/docs/authoring/>
-
-## Code Cell
-
-Here is a Python code cell:
-
-```{python}
-import os
-os.cpu_count()
-```
-
-## Equation
+## Scene 3D
 ```{ojs}
 //| echo: false
 
 // 1. Initialisation des constantes
-
-w = 600
-h = 400
+w = 1000
+h = 800
 
 // 2. Importation (on utilise 'THREE' pour correspondre à ton code)
 THREE = require("three@0.160.0")
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+OrbitControls = {
+  // On utilise la même logique que pour l'OBJLoader avec esm.sh
+  const mod = await import("https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js");
+  return mod.OrbitControls; // On retourne la classe pour l'utiliser plus bas
+}
+OBJLoader = {
+  const { OBJLoader } = await import("https://esm.sh/three@0.160.0/examples/jsm/loaders/OBJLoader.js");
+  return new OBJLoader();
+}
+MTLLoader = {
+  const { MTLLoader } = await import("https://esm.sh/three@0.160.0/examples/jsm/loaders/MTLLoader.js");
+  return new MTLLoader();
+}
+
+GLTFLoader = {
+  const { GLTFLoader } = await import("https://esm.sh/three@0.160.0/examples/jsm/loaders/GLTFLoader.js");
+  return new GLTFLoader();
+}
 
 
 
@@ -44,17 +46,19 @@ canvas = {
   
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(60, w/h, 0.1, 100);
-  camera.position.set(2, 2, 2);
+  camera.position.set(5, 5, 5);
   camera.lookAt(0, 0, 0); // On oriente la caméra vers le centre
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(w, h);
   
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+
   // On ajoute le canvas au conteneur
   container.appendChild(renderer.domElement);
 
-  const controls = new OrbitControls.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true; // Ajoute une inertie fluide
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; 
   controls.dampingFactor = 0.05;
 
   const size = 10;
@@ -70,16 +74,29 @@ canvas = {
   const light = new THREE.DirectionalLight(0xffffff, 1);
   light.position.set(5, 5, 5);
   scene.add(light);
-  scene.add(new THREE.AmbientLight(0x404040)); // Lumière d'ambiance
+  scene.add(new THREE.AmbientLight(0x404040)); 
 
-  const geo = new THREE.BoxGeometry();
-  const mat = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
-  const mesh = new THREE.Mesh(geo, mat);
-  scene.add(mesh);
+  const glbUrl = await FileAttachment("nounours2.glb").url();
+
+  GLTFLoader.load(
+    glbUrl, 
+    (gltf) => {
+      const model = gltf.scene;
+
+      // Ajustement de la taille et de la position
+      model.scale.set(0.1, 0.1, 0.1); 
+      model.position.set(0, 0, 0);
+      model.rotation.x = -Math.PI / 2;
+      model.rotation.z = Math.PI / 2;
+
+      scene.add(model);
+    },
+    (xhr) => { console.log('GLB: ' + (xhr.loaded / xhr.total * 100) + '%'); },
+    (error) => { console.error('Erreur GLB', error); }
+  );
 
   function animate() {
-    mesh.rotation.x += 0.01;
-    mesh.rotation.y += 0.01;
+    controls.update();
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
   }
