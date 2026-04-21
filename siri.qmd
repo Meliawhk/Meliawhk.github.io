@@ -1,9 +1,5 @@
 ---
 title: "Ma Scène 3D"
-format: 
-  html:
-    css: site.css
-    page-layout: full
 ---
 
 

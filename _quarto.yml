@@ -7,7 +7,7 @@ website:
     background: primary 
     left:
       - text: "Accueil"
-        href: walkthrough.qmd
+        href: index.qmd
       - text: "Scène 3D"
         href: siri.qmd
 
