@@ -1,3 +1,18 @@
 project:
   type: website
-  output-dir: docs
+
+website:
+  title: "Portefolio Pierre Chauvet"
+  navbar:
+    background: primary 
+    left:
+      - text: "Accueil"
+        href: walkthrough.qmd
+      - text: "Scène 3D"
+        href: siri.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: site.css
+    page-layout: full
