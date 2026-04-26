@@ -1,22 +1,25 @@
 ---
-title: "Ma Scène 3D"
+title: "Projet SIRI"
 ---
 
+## Description du projet
+
+L'objectif de ce projet était d'approfondir les concepts théoriques de la photogrammétrie abordés en cours et de mettre en pratique le processus de reconstruction 3D en utilisant divers logiciels tels que Meshroom et RealityScan.
+Lors de ce projet nous avons eu l'occasion de numériser l'objet de notre choix et d'observer le Pipeline de reconstruction de scène 3D avec notament sa Structure from motion, les nuages de points obtenus ainsi que la construcion du mesh à partir de ce nuage de points.
 
 ## Scene 3D
 ```{ojs}
 //| echo: false
 
-// 1. Initialisation des constantes
+// Initialisation des constantes
 w = 1000
 h = 800
 
-// 2. Importation (on utilise 'THREE' pour correspondre à ton code)
+// Importation 
 THREE = require("three@0.160.0")
 OrbitControls = {
-  // On utilise la même logique que pour l'OBJLoader avec esm.sh
   const mod = await import("https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js");
-  return mod.OrbitControls; // On retourne la classe pour l'utiliser plus bas
+  return mod.OrbitControls;
 }
 OBJLoader = {
   const { OBJLoader } = await import("https://esm.sh/three@0.160.0/examples/jsm/loaders/OBJLoader.js");
@@ -34,61 +37,60 @@ GLTFLoader = {
 
 
 
-// 3. Création de la vue
+// Création de la vue
 canvas = {
-  // On crée un conteneur HTML
+  // Création conteneur HTML
   const container = html`<div style="width: 90%; height: 60vh; min-height: 300px;"></div>`;
   
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
   camera.position.set(5, 5, 5);
-  camera.lookAt(0, 0, 0); // On oriente la caméra vers le centre
+  camera.lookAt(0, 0, 0); 
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(w, h);
   
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-  // On ajoute le canvas au conteneur
   container.appendChild(renderer.domElement);
 
   const resizeObserver = new ResizeObserver((entries) => {
     for (const entry of entries) {
-      // On récupère la vraie taille de la boîte sur le téléphone
       const width = entry.contentRect.width;
       const height = entry.contentRect.height;
       
-      // On met à jour la taille du dessin
       renderer.setSize(width, height);
       
-      // On ajuste l'objectif de la caméra pour ne pas déformer le nounours
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
     }
   });
   
-  // On demande à l'observateur de surveiller notre conteneur
   resizeObserver.observe(container);
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true; 
   controls.dampingFactor = 0.05;
 
-  const size = 10;
-  const divisions = 10;
+  const size = 20;
+  const divisions = 20;
   const gridHelper = new THREE.GridHelper(size, divisions, 0x888888, 0x444444);
   scene.add(gridHelper);
 
-  // Optionnel : Un repère d'axes (Rouge=X, Vert=Y, Bleu=Z)
-  const axesHelper = new THREE.AxesHelper(1);
+  // Repère d'axes 
+  const axesHelper = new THREE.AxesHelper(3);
   scene.add(axesHelper);
 
-  // Ajout d'une lumière (indispensable pour le MeshStandardMaterial, sinon c'est noir !)
-  const light = new THREE.DirectionalLight(0xffffff, 1);
-  light.position.set(5, 5, 5);
-  scene.add(light);
-  scene.add(new THREE.AmbientLight(0x404040)); 
+  // Ajout d'une lumière 
+  //const light = new THREE.DirectionalLight(0xffffff, 1);
+  const light = new THREE.AmbientLight(0xffffff, 1);
 
+
+  //light.position.set(5, 5, 5);
+  scene.add(light);
+  //scene.add(new THREE.AmbientLight(0x404040)); 
+
+// Chargement du fichier glb
   const glbUrl = await FileAttachment("nounours2.glb").url();
 
   GLTFLoader.load(
@@ -96,11 +98,11 @@ canvas = {
     (gltf) => {
       const model = gltf.scene;
 
-      // Ajustement de la taille et de la position
+      // Ajustement de la rotation, de la taille et de la position
       model.scale.set(0.1, 0.1, 0.1); 
       model.position.set(0, 0, 0);
       model.rotation.x = -Math.PI / 2;
-      model.rotation.z = Math.PI / 2;
+      model.rotation.z = Math.PI ;
 
       scene.add(model);
     },
@@ -115,7 +117,6 @@ canvas = {
   }
   animate();
 
-  // On retourne le conteneur pour qu'il s'affiche dans Quarto
   return container;
 }
 ```

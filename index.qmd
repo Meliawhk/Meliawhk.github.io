@@ -9,18 +9,31 @@ title: "Bienvenue"
 
 ## À propos de moi
 Je m'appelle Pierre Chauvet, suis un étudiant en Master 1 ISCG à Limoges. 
-Mon parcours m'a permis de développer des compétences en informatique.
+Mon parcours m'a permis de développer des compétences en informatique notament dans le domaine de la conception graphique.
 
 ---
 
 ## Mes Projets
 ::: {.grid}
+
+
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100}
 ::: {.card-body}
-### 🧸 Scène 3D Interactive
-Découvre ma scene 3D directement depuis le menu en haut de la page.
+### Projet SIRI
+L'objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie voici donc le modele 3D que j'ai produit dans une scene 3D interactive.
 :::
 :::
 :::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100}
+::: {.card-body}
+### Géneration Procédurale de monde urbain
+Page en developpement !
+:::
+:::
+:::
+
+
 :::
