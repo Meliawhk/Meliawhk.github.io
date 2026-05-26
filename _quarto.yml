@@ -8,7 +8,13 @@ website:
     left:
       - text: "Accueil"
         href: index.qmd
+      - text: "Images réalistes"
+        href: img_realiste.qmd
       - text: "Scène 3D"
+        href: opengl.qmd
+      - text: "Génération de monde"
+        href: generation_monde.qmd
+      - text: "Projet SIRI"
         href: siri.qmd
 
 format:

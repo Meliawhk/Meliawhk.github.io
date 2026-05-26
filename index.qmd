@@ -21,7 +21,25 @@ Mon parcours m'a permis de développer des compétences en informatique notament
 ::: {.card .h-100}
 ::: {.card-body}
 ### Projet SIRI
-L'objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie voici donc le modele 3D que j'ai produit dans une scene 3D interactive.
+L'objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie, voici donc le modele 3D que j'ai produit dans une scene 3D interactive.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100}
+::: {.card-body}
+### Synthèse d'images réalistes
+Page en developpement !
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100}
+::: {.card-body}
+### Moteur 3D OpenGL
+Page en developpement !
 :::
 :::
 :::
@@ -34,6 +52,8 @@ Page en developpement !
 :::
 :::
 :::
+
+
 
 
 :::

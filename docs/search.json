@@ -32,6 +32,55 @@
     "href": "index.html#mes-projets",
     "title": "Bienvenue",
     "section": "Mes Projets",
-    "text": "Mes Projets\n\n\n\n\nProjet SIRI\nL’objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie voici donc le modele 3D que j’ai produit dans une scene 3D interactive.\n\n\n\n\n\n\nGéneration Procédurale de monde urbain\nPage en developpement !"
+    "text": "Mes Projets\n\n\n\n\nProjet SIRI\nL’objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie, voici donc le modele 3D que j’ai produit dans une scene 3D interactive.\n\n\n\n\n\n\nSynthèse d’images réalistes\nPage en developpement !\n\n\n\n\n\n\nMoteur 3D OpenGL\nPage en developpement !\n\n\n\n\n\n\nGéneration Procédurale de monde urbain\nPage en developpement !"
+  },
+  {
+    "objectID": "generation_monde.html",
+    "href": "generation_monde.html",
+    "title": "Géneration de monde urbain",
+    "section": "",
+    "text": "Ce projet est un projet de groupe que j’ai réalisé en M1. Il consistait à génerer un monde urbain à l’aide de méthodes procédurales. Lors de ce projet je me suis occupé de la création des bâtiments et des textures. Les bâtiments sont générés à l’aide de shape grammar. Au premier abord la création de texture via des méthodes procédurales peut paraitre difficile, mais beaucoup de texture peuvent être créer en combinant des méthodes procédurales/bruits. Pour la texture de route et des toitures gravillonnés j’ai utilisé un bruit de Perlin quio permet de créer une sorte de variété de couleur de gravier. Pour les textures de bâtiments j’ai implémenté une méthode de “Tilling”, qui consiste à répéter un motif . Ces méthodes procédurales rendent un résultat acceptable mais engendre des effets indésirable qui peuvent être résolus par des filtrages."
+  },
+  {
+    "objectID": "generation_monde.html#description-du-projet",
+    "href": "generation_monde.html#description-du-projet",
+    "title": "Géneration de monde urbain",
+    "section": "",
+    "text": "Ce projet est un projet de groupe que j’ai réalisé en M1. Il consistait à génerer un monde urbain à l’aide de méthodes procédurales. Lors de ce projet je me suis occupé de la création des bâtiments et des textures. Les bâtiments sont générés à l’aide de shape grammar. Au premier abord la création de texture via des méthodes procédurales peut paraitre difficile, mais beaucoup de texture peuvent être créer en combinant des méthodes procédurales/bruits. Pour la texture de route et des toitures gravillonnés j’ai utilisé un bruit de Perlin quio permet de créer une sorte de variété de couleur de gravier. Pour les textures de bâtiments j’ai implémenté une méthode de “Tilling”, qui consiste à répéter un motif . Ces méthodes procédurales rendent un résultat acceptable mais engendre des effets indésirable qui peuvent être résolus par des filtrages."
+  },
+  {
+    "objectID": "generation_monde.html#image-du-projet",
+    "href": "generation_monde.html#image-du-projet",
+    "title": "Géneration de monde urbain",
+    "section": "Image du projet",
+    "text": "Image du projet"
+  },
+  {
+    "objectID": "img_realiste.html#image-du-projet",
+    "href": "img_realiste.html#image-du-projet",
+    "title": "Projet Synthèse d’images réalistes",
+    "section": "Image du projet",
+    "text": "Image du projet"
+  },
+  {
+    "objectID": "opengl.html",
+    "href": "opengl.html",
+    "title": "Moteur 3D OpenGL",
+    "section": "",
+    "text": "Lors du permier semestre de la première année du master j’ai eu à créer un moteur de visualisation 3D avec OpenGL.\nLes Travaux pratique m’ont permis d’appendre différente manière de filtrer des textures.\nJ’ai également appris à manipuler des shaders “classique” ou même en “Defferd Shading”."
+  },
+  {
+    "objectID": "opengl.html#description-du-projet",
+    "href": "opengl.html#description-du-projet",
+    "title": "Moteur 3D OpenGL",
+    "section": "",
+    "text": "Lors du permier semestre de la première année du master j’ai eu à créer un moteur de visualisation 3D avec OpenGL.\nLes Travaux pratique m’ont permis d’appendre différente manière de filtrer des textures.\nJ’ai également appris à manipuler des shaders “classique” ou même en “Defferd Shading”."
+  },
+  {
+    "objectID": "opengl.html#image-du-projet",
+    "href": "opengl.html#image-du-projet",
+    "title": "Moteur 3D OpenGL",
+    "section": "Image du projet",
+    "text": "Image du projet"
   }
 ]

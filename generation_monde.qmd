@@ -1,0 +1,15 @@
+---
+title: "Géneration de monde urbain"
+---
+
+## Description du projet
+
+Ce projet est un projet de groupe que j'ai réalisé en M1. Il consistait à génerer un monde urbain à l'aide de méthodes procédurales.
+Lors de ce projet je me suis occupé de la création des bâtiments et des textures.
+Les bâtiments sont générés à l'aide de shape grammar.
+Au premier abord la création de texture via des méthodes procédurales peut paraitre difficile, mais beaucoup de texture peuvent être créer en combinant des méthodes procédurales/bruits.
+Pour la texture de route et des toitures gravillonnés j'ai utilisé un bruit de Perlin quio permet de créer une sorte de variété de couleur de gravier.
+Pour les textures de bâtiments j'ai implémenté une méthode de "Tilling", qui consiste à répéter un motif .
+Ces méthodes procédurales rendent un résultat acceptable mais engendre des effets indésirable qui peuvent être résolus par des filtrages.
+
+## Image du projet

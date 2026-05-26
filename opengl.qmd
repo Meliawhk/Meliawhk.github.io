@@ -1,0 +1,13 @@
+---
+title: "Moteur 3D OpenGL"
+---
+
+## Description du projet
+
+Lors du permier semestre de la première année du master j'ai eu à créer un moteur de visualisation 3D avec OpenGL.
+
+Les Travaux pratique m'ont permis d'appendre différente manière de filtrer des textures.
+
+J'ai également appris à manipuler des shaders "classique"  ou même en "Defferd Shading".
+
+## Image du projet
