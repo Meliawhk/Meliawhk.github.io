@@ -1,7 +1,7 @@
 /* Style du bandeau d'introduction */
 .intro-banner {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
   padding: 60px 20px;
   border-radius: 15px;
   margin-bottom: 40px;
@@ -13,12 +13,14 @@
   border: none !important;
   border-radius: 12px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  box-shadow: 0 4px 15px rgba(0,0,0,0);
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
 /* Effet au survol des cartes */
 .card:hover {
+  background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
@@ -39,7 +41,57 @@
 }
 
 body {
-  background-color: black; 
-  color: white;            
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Optionnel : changer la police */
+  background: linear-gradient(135deg, #1f1c2c, #928dab) no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(255, 255, 255);          
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.img-slider-container {
+  position: absolute; 
+  bottom: 100%; 
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 100; 
+  
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); 
+  transition: all 0.3s ease; 
+  pointer-events: none; 
+}
+
+.card:hover .img-slider-container {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-15px); 
+}
+
+.img-slider-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  animation: glissement 10s linear infinite alternate;
+  animation-play-state: paused;
+}
+
+.card:hover .img-slider-track {
+  animation-play-state: running;
+}
+
+.img-slider-track img {
+  height: 100%;
+  width: 250px;
+  object-fit: cover;
+}
+
+@keyframes glissement {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
 }

@@ -22,24 +22,48 @@ Mon parcours m'a permis de développer des compétences en informatique notament
 ::: {.card-body}
 ### Projet SIRI
 L'objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie, voici donc le modele 3D que j'ai produit dans une scene 3D interactive.
+[](siri.qmd){.stretched-link .text-decoration-none}
 :::
 :::
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100}
+
+::: {.img-slider-container}
+::: {.img-slider-track}
+![](data/img_realiste/resultat.png)
+![](data/img_realiste/volumetrique.png)
+
+:::
+:::
+
 ::: {.card-body}
 ### Synthèse d'images réalistes
 Page en developpement !
+[](img_realiste.qmd){.stretched-link .text-decoration-none}
+
 :::
 :::
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100}
+
+::: {.img-slider-container}
+::: {.img-slider-track}
+![](data/opengl/Shadow_mapping_filter.png)
+![](data/opengl/transparence.png)
+
+:::
+:::
+
 ::: {.card-body}
 ### Moteur 3D OpenGL
 Page en developpement !
+
+[](opengl.qmd){.stretched-link .text-decoration-none}
+
 :::
 :::
 :::
@@ -49,6 +73,8 @@ Page en developpement !
 ::: {.card-body}
 ### Géneration Procédurale de monde urbain
 Page en developpement !
+[](generation_monde.qmd){.stretched-link .text-decoration-none}
+
 :::
 :::
 :::
