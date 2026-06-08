@@ -4,10 +4,30 @@ title: "Moteur 3D OpenGL"
 
 ## Description du projet
 
-Lors du permier semestre de la première année du master j'ai eu à créer un moteur de visualisation 3D avec OpenGL.
+Lors du permier semestre de la première année du master j'ai eu à créer un moteur de visualisation 3D en C++ avec OpenGL.
 
-Les Travaux pratique m'ont permis d'appendre différente manière de filtrer des textures.
+Pour l'interface utilisateur on a utilisé ImGUI.
 
-J'ai également appris à manipuler des shaders "classique"  ou même en "Defferd Shading".
+Les Travaux pratique m'ont permis d'appendre énormément de choses.
+
+J'ai également appris à manipuler des shaders "classique" en Forward Rendering ou même en Defferd Shading.
+
+# Compétences/Méthodes apprises :
+
+- Utilisation OpenGL
+- Filtres de Textures
+- Normal Mapping
+- Deffered Shading
+- Shadow Mapping
 
 ## Image du projet
+
+
+::: {layout-ncol=3}
+![Rendu sans filtre](data/opengl/Shadow_mapping_no_filter.png)
+
+![Rendu avec filtre](data/opengl/Shadow_mapping_filter.png)
+
+![Alpha blending](data/opengl/transparence.png)
+
+:::

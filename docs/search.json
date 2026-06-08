@@ -32,55 +32,69 @@
     "href": "index.html#mes-projets",
     "title": "Bienvenue",
     "section": "Mes Projets",
-    "text": "Mes Projets\n\n\n\n\nProjet SIRI\nL’objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie, voici donc le modele 3D que j’ai produit dans une scene 3D interactive. \n\n\n\n\n\n\n\n \n\n\n\nSynthèse d’images réalistes\nPage en developpement ! \n\n\n\n\n\n\n\n \n\n\n\nMoteur 3D OpenGL\nPage en developpement !\n\n\n\n\n\n\n\nGéneration Procédurale de monde urbain\nPage en developpement !"
+    "text": "Mes Projets\n\n\n\n\n\n\n\n\n\n\nMoteur 3D OpenGL (2025)\nMon premier moteur 3D developper en C++ avec OpenGL et une interface ImGUI que j’ai réalisé lors de ma première année de master.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSynthèse d’images réalistes (2026)\nMon permier Ray Tracer réalisé en C++ lors de ma première année de master. \n\n\n\n\n\n\n\n\n\n\n\n\nGéneration Procédurale de monde urbain ( 2026 )\nUn projet de génération de monde urbain réalisé avec des méthodes procédurales en C# sur Unity en première année de master. \n\n\n\n\n\n\nProjet SIRI ( 2026 )\nL’objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie, voici donc le modele 3D que j’ai produit dans une scene 3D interactive."
   },
   {
     "objectID": "generation_monde.html",
     "href": "generation_monde.html",
     "title": "Géneration de monde urbain",
     "section": "",
-    "text": "Ce projet est un projet de groupe que j’ai réalisé en M1. Il consistait à génerer un monde urbain à l’aide de méthodes procédurales. Lors de ce projet je me suis occupé de la création des bâtiments et des textures. Les bâtiments sont générés à l’aide de shape grammar. Au premier abord la création de texture via des méthodes procédurales peut paraitre difficile, mais beaucoup de texture peuvent être créer en combinant des méthodes procédurales/bruits. Pour la texture de route et des toitures gravillonnés j’ai utilisé un bruit de Perlin quio permet de créer une sorte de variété de couleur de gravier. Pour les textures de bâtiments j’ai implémenté une méthode de “Tilling”, qui consiste à répéter un motif . Ces méthodes procédurales rendent un résultat acceptable mais engendre des effets indésirable qui peuvent être résolus par des filtrages."
+    "text": "Ce projet est un projet de groupe que j’ai réalisé en M1. Il consistait à génerer un monde urbain à l’aide de méthodes procédurales en C# sur Unity. Lors de ce projet je me suis occupé de la création des bâtiments et des textures. Les bâtiments sont générés à l’aide de Shape Grammar. Au premier abord la création de texture via des méthodes procédurales peut paraitre difficile, mais beaucoup de texture peuvent être créer en combinant des méthodes procédurales/bruits. Pour la texture de route et des toitures gravillonnés j’ai utilisé un bruit de Perlin quio permet de créer une sorte de variété de couleur de gravier. Pour les textures de bâtiments j’ai implémenté une méthode de “Tilling”, qui consiste à répéter un motif . Ces méthodes procédurales rendent un résultat acceptable mais engendre des effets indésirable qui peuvent être résolus par des filtrages."
   },
   {
     "objectID": "generation_monde.html#description-du-projet",
     "href": "generation_monde.html#description-du-projet",
     "title": "Géneration de monde urbain",
     "section": "",
-    "text": "Ce projet est un projet de groupe que j’ai réalisé en M1. Il consistait à génerer un monde urbain à l’aide de méthodes procédurales. Lors de ce projet je me suis occupé de la création des bâtiments et des textures. Les bâtiments sont générés à l’aide de shape grammar. Au premier abord la création de texture via des méthodes procédurales peut paraitre difficile, mais beaucoup de texture peuvent être créer en combinant des méthodes procédurales/bruits. Pour la texture de route et des toitures gravillonnés j’ai utilisé un bruit de Perlin quio permet de créer une sorte de variété de couleur de gravier. Pour les textures de bâtiments j’ai implémenté une méthode de “Tilling”, qui consiste à répéter un motif . Ces méthodes procédurales rendent un résultat acceptable mais engendre des effets indésirable qui peuvent être résolus par des filtrages."
+    "text": "Ce projet est un projet de groupe que j’ai réalisé en M1. Il consistait à génerer un monde urbain à l’aide de méthodes procédurales en C# sur Unity. Lors de ce projet je me suis occupé de la création des bâtiments et des textures. Les bâtiments sont générés à l’aide de Shape Grammar. Au premier abord la création de texture via des méthodes procédurales peut paraitre difficile, mais beaucoup de texture peuvent être créer en combinant des méthodes procédurales/bruits. Pour la texture de route et des toitures gravillonnés j’ai utilisé un bruit de Perlin quio permet de créer une sorte de variété de couleur de gravier. Pour les textures de bâtiments j’ai implémenté une méthode de “Tilling”, qui consiste à répéter un motif . Ces méthodes procédurales rendent un résultat acceptable mais engendre des effets indésirable qui peuvent être résolus par des filtrages."
   },
   {
     "objectID": "generation_monde.html#image-du-projet",
     "href": "generation_monde.html#image-du-projet",
     "title": "Géneration de monde urbain",
     "section": "Image du projet",
-    "text": "Image du projet"
+    "text": "Image du projet\nFaites glisser le curseur pour voir la différence avec et sans le filtre.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShape grammar sans diversifications\n\n\n\n\n\n\n\nShape Grammar avec diversifications\n\n\n\n\n\n\n\nRésultat"
+  },
+  {
+    "objectID": "img_realiste.html",
+    "href": "img_realiste.html",
+    "title": "Projet Synthèse d’images réalistes",
+    "section": "",
+    "text": "Projet de Ray Tracer créer lors de ma première année de master en C++.\nAfin de pouvoir utilisé des mesh dans un temps de rendu acceptable on a utilisé le BVH qui est une structure accélératrice.\nLors de ce projet on a pus implémenter la réfration et la réflexion de rayon en respectant la loi de Snell-Descartes.\nEnsuite dans ce projet j’ai eu envie d’implémenter des objets émetant de la lumière, pour ce faire j’ai donc créer un path tracer assez basique pour me permettre d’y arriver. J’ai également implémenté des objets volumétriques dans le but de pouvoir représenter de la fumée ou un brouillard.\nJ’ai ensuite ajouté des textures procédurales, l’une est une texture de damier/échequiers et l’autres est une texture de perlin noise qui m’as permis de créer une texture de marbre."
+  },
+  {
+    "objectID": "img_realiste.html#description-du-projet",
+    "href": "img_realiste.html#description-du-projet",
+    "title": "Projet Synthèse d’images réalistes",
+    "section": "",
+    "text": "Projet de Ray Tracer créer lors de ma première année de master en C++.\nAfin de pouvoir utilisé des mesh dans un temps de rendu acceptable on a utilisé le BVH qui est une structure accélératrice.\nLors de ce projet on a pus implémenter la réfration et la réflexion de rayon en respectant la loi de Snell-Descartes.\nEnsuite dans ce projet j’ai eu envie d’implémenter des objets émetant de la lumière, pour ce faire j’ai donc créer un path tracer assez basique pour me permettre d’y arriver. J’ai également implémenté des objets volumétriques dans le but de pouvoir représenter de la fumée ou un brouillard.\nJ’ai ensuite ajouté des textures procédurales, l’une est une texture de damier/échequiers et l’autres est une texture de perlin noise qui m’as permis de créer une texture de marbre."
   },
   {
     "objectID": "img_realiste.html#image-du-projet",
     "href": "img_realiste.html#image-du-projet",
     "title": "Projet Synthèse d’images réalistes",
     "section": "Image du projet",
-    "text": "Image du projet"
+    "text": "Image du projet\n\n\n\n\n\n\nMatériaux de réfraction et de réflexion de rayon\n\n\n\n\n\n\n\nTexture de marbre\n\n\n\n\n\n\n\n3 Sphères Volumétriques de densité différentes\n\n\n\n\n\n\n\n\n\nImage contenant les ajouts que j’ai fais dans le projet"
   },
   {
     "objectID": "opengl.html",
     "href": "opengl.html",
     "title": "Moteur 3D OpenGL",
     "section": "",
-    "text": "Lors du permier semestre de la première année du master j’ai eu à créer un moteur de visualisation 3D avec OpenGL.\nLes Travaux pratique m’ont permis d’appendre différente manière de filtrer des textures.\nJ’ai également appris à manipuler des shaders “classique” ou même en “Defferd Shading”."
+    "text": "Lors du permier semestre de la première année du master j’ai eu à créer un moteur de visualisation 3D en C++ avec OpenGL.\nPour l’interface utilisateur on a utilisé ImGUI.\nLes Travaux pratique m’ont permis d’appendre énormément de choses.\nJ’ai également appris à manipuler des shaders “classique” en Forward Rendering ou même en Defferd Shading."
   },
   {
     "objectID": "opengl.html#description-du-projet",
     "href": "opengl.html#description-du-projet",
     "title": "Moteur 3D OpenGL",
     "section": "",
-    "text": "Lors du permier semestre de la première année du master j’ai eu à créer un moteur de visualisation 3D avec OpenGL.\nLes Travaux pratique m’ont permis d’appendre différente manière de filtrer des textures.\nJ’ai également appris à manipuler des shaders “classique” ou même en “Defferd Shading”."
+    "text": "Lors du permier semestre de la première année du master j’ai eu à créer un moteur de visualisation 3D en C++ avec OpenGL.\nPour l’interface utilisateur on a utilisé ImGUI.\nLes Travaux pratique m’ont permis d’appendre énormément de choses.\nJ’ai également appris à manipuler des shaders “classique” en Forward Rendering ou même en Defferd Shading."
   },
   {
     "objectID": "opengl.html#image-du-projet",
     "href": "opengl.html#image-du-projet",
     "title": "Moteur 3D OpenGL",
     "section": "Image du projet",
-    "text": "Image du projet"
+    "text": "Image du projet\n\n\n\n\n\n\nRendu sans filtre\n\n\n\n\n\n\n\nRendu avec filtre\n\n\n\n\n\n\n\nAlpha blending"
   }
 ]

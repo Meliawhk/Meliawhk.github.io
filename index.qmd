@@ -19,48 +19,20 @@ Mon parcours m'a permis de développer des compétences en informatique notament
 
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100}
-::: {.card-body}
-### Projet SIRI
-L'objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie, voici donc le modele 3D que j'ai produit dans une scene 3D interactive.
-[](siri.qmd){.stretched-link .text-decoration-none}
-:::
-:::
-:::
-
-::: {.g-col-12 .g-col-md-6}
-::: {.card .h-100}
 
 ::: {.img-slider-container}
 ::: {.img-slider-track}
-![](data/img_realiste/resultat.png)
-![](data/img_realiste/volumetrique.png)
 
-:::
-:::
-
-::: {.card-body}
-### Synthèse d'images réalistes
-Page en developpement !
-[](img_realiste.qmd){.stretched-link .text-decoration-none}
-
-:::
-:::
-:::
-
-::: {.g-col-12 .g-col-md-6}
-::: {.card .h-100}
-
-::: {.img-slider-container}
-::: {.img-slider-track}
 ![](data/opengl/Shadow_mapping_filter.png)
+
 ![](data/opengl/transparence.png)
 
 :::
 :::
 
 ::: {.card-body}
-### Moteur 3D OpenGL
-Page en developpement !
+### Moteur 3D OpenGL (2025)
+Mon premier moteur 3D developper en C++ avec OpenGL et une interface ImGUI que j'ai réalisé lors de ma première année de master.
 
 [](opengl.qmd){.stretched-link .text-decoration-none}
 
@@ -68,11 +40,50 @@ Page en developpement !
 :::
 :::
 
+
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100}
+
+::: {.img-slider-container}
+::: {.img-slider-track}
+
+![](data/img_realiste/reflet.jpg)
+
+![](data/img_realiste/resultat.png)
+
+![](data/img_realiste/volumetrique.png)
+
+
+
+:::
+:::
+
 ::: {.card-body}
-### Géneration Procédurale de monde urbain
-Page en developpement !
+### Synthèse d'images réalistes (2026)
+Mon permier Ray Tracer réalisé en C++ lors de ma première année de master.
+[](img_realiste.qmd){.stretched-link .text-decoration-none}
+
+:::
+:::
+:::
+
+
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100}
+
+::: {.img-slider-container}
+::: {.img-slider-track}
+![](data/generation_monde/resultat.png)
+
+![](data/generation_monde/brique_avec_filtrage.png)
+
+:::
+:::
+
+::: {.card-body}
+### Géneration Procédurale de monde urbain ( 2026 )
+Un projet de génération de monde urbain réalisé avec des méthodes procédurales en C# sur Unity en première année de master.
 [](generation_monde.qmd){.stretched-link .text-decoration-none}
 
 :::
@@ -80,6 +91,15 @@ Page en developpement !
 :::
 
 
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100}
+::: {.card-body}
+### Projet SIRI ( 2026 )
+L'objectif de ce projet était de visualiser le fonctionnement de la photogrammétrie, voici donc le modele 3D que j'ai produit dans une scene 3D interactive.
+[](siri.qmd){.stretched-link .text-decoration-none}
+:::
+:::
+:::
 
 
 :::
